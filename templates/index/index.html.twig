@@ -1,18 +1,42 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<div class="superior">
+    <h1 class="titulo">PizzaWeb</h1>
+    <div class="pizzas">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="card-img-top principal-carousel d-block w-100" src="{{ asset("img/pizza1.jpg") }}">
+                </div>
+                <div class="carousel-item">
+                    <img class="card-img-top principal-carousel d-block w-100" src="{{ asset("img/pizza2.jpg") }}">
+                </div>
+                <div class="carousel-item">
+                    <img class="card-img-top principal-carousel d-block w-100" src="{{ asset("img/pizza3.jpg") }}">
+                </div>
+                <div class="carousel-item">
+                    <img class="card-img-top principal-carousel d-block w-100" src="{{ asset("img/pizza4.jpg") }}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="{{ path('pizza' , {id:0})}}" class="btn btn-block crearPizza my-3"><h5>Selecciona tus ingredientes desde 0</h5></a>
+    <hr>
+</div>  
 <div class="row d-flex pizzas">
+<div class="col-12 text-center">
+    <p class="h3">Escoge algo de tu agrado</p>
+</div> 
   {% if pizzas is defined%}
     {% for pizza in pizzas %}
         <div class="col-6 mt-5">
-            <div class="card mb-3">
-                <div class="card-body p-2">
-                    <h4 class="card-title text-center">{{ pizza.nombre }}</h4>
-                    <p class="card-text text-center">
-                        {{ pizza.precio }} €
-                    </p>
-                </div>
-            </div>
+            <a href="{{ path('pizza' , {id:pizza.id})}}" class="btn btn-block pizza">
+                <h4 class="text-center">{{ pizza.nombre }}</h4>
+                <span class="text-center">
+                    {{ pizza.precio }} €
+                </span>
+            </a>
         </div>
     {% endfor %}
   {% endif %}

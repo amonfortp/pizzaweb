@@ -1,0 +1,30 @@
+:root {
+  --fondo: #fdfffc;
+  --fondo2: #011627;
+  --resalt1: #2ec4b6;
+  --resalt2: #e71d36;
+  --resalt3: #ff9f1c;
+}
+
+img {
+  height: 600px;
+}
+
+body {
+  background-color: var(--fondo);
+}
+
+hr {
+  background-color: var(--resalt3);
+  width: 100%;
+  height: 15px;
+}
+
+.titulo {
+  text-align: center;
+  color: var(--resalt3);
+}
+
+.superior {
+  background-color: var(--fondo2);
+}

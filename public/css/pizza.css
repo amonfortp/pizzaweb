@@ -1,3 +1,37 @@
+:root {
+  --fondo: #fdfffc;
+  --fondo2: #011627;
+  --resalt1: #2ec4b6;
+  --resalt2: #e71d36;
+  --resalt3: #ff9f1c;
+}
+
 div.pizzas {
+  margin: auto;
   width: 80%;
+}
+
+.btn {
+  background-color: var(--resalt3);
+}
+
+.crearPizza {
+  margin: auto;
+  width: 60%;
+}
+
+.crearPizza:hover {
+  background-color: var(--resalt2);
+}
+
+.pizza:hover {
+  background-color: var(--resalt2);
+}
+
+.pizza:hover span {
+  font-weight: bold;
+}
+
+h4 {
+  color: var(--resalt);
 }

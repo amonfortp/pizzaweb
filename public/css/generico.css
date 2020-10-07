@@ -1,7 +1,7 @@
 :root {
   --fondo: #fdfffc;
   --fondo2: #011627;
-  --resalt1: #2ec4b6;
+  --resalt1: #2ec4b586;
   --resalt2: #e71d36;
   --resalt3: #ff9f1c;
 }
@@ -27,4 +27,44 @@ hr {
 
 .superior {
   background-color: var(--fondo2);
+}
+
+div.pizzas {
+  margin: auto;
+  width: 80%;
+}
+
+div.ingredientes {
+  margin: auto;
+  width: 60%;
+}
+
+.btn {
+  background-color: var(--resalt3);
+}
+
+.crearPizza {
+  margin: auto;
+  width: 60%;
+}
+
+.btn:hover {
+  background-color: var(--resalt2);
+}
+
+.pizza:hover span {
+  font-weight: bold;
+}
+
+.selector {
+  margin: 6px;
+}
+
+.col-6 {
+  margin-right: 0px !important;
+}
+
+#precio {
+  text-align: center;
+  font-weight: bold;
 }

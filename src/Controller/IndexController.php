@@ -27,6 +27,6 @@ class IndexController extends AbstractController
     private function obtenerPizzas()
     {
         $repository = $this->getDoctrine()->getRepository(Pizza::class);
-        return $pizzas = $repository->findAll();
+        return $repository->findAll();
     }
 }

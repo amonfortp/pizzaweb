@@ -24,21 +24,21 @@
     <a href="{{ path('pizza' , {id:0})}}" class="btn btn-block crearPizza my-3"><h5>Selecciona tus ingredientes desde 0</h5></a>
     <hr>
 </div>  
-<div class="row d-flex pizzas">
-<div class="col-12 text-center">
-    <p class="h3">Escoge algo de tu agrado</p>
-</div> 
-  {% if pizzas is defined%}
-    {% for pizza in pizzas %}
-        <div class="col-6 mt-5">
-            <a href="{{ path('pizza' , {id:pizza.id})}}" class="btn btn-block pizza">
-                <h4 class="text-center">{{ pizza.nombre }}</h4>
-                <span class="text-center">
-                    {{ pizza.precio }} €
-                </span>
-            </a>
-        </div>
-    {% endfor %}
-  {% endif %}
+<div class="row d-flex pizzas mb-5">
+    <div class="col-12 text-center">
+        <p class="h3">Escoge algo de tu agrado</p>
+    </div> 
+    {% if pizzas is defined%}
+        {% for pizza in pizzas %}
+            <div class="col-6 mt-5">
+                <a href="{{ path('pizza' , {id:pizza.id})}}" class="btn btn-block pizza">
+                    <h4 class="text-center">{{ pizza.nombre }}</h4>
+                    <span class="text-center">
+                        {{ pizza.precio }} €
+                    </span>
+                </a>
+            </div>
+        {% endfor %}
+    {% endif %}
 </div>
 {% endblock %}

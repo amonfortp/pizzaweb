@@ -4,6 +4,7 @@ var direccion;
 var inputCheck = document.getElementsByClassName("check");
 calcularPrecio();
 
+//Añade un evento onchange en los checkbox para realizar cierta accion cada vez que alguien iteractua con ellas
 for (var i = 0; i < inputCheck.length; i++) {
   if (inputCheck[i].checked == true) {
     inputCheck[i].parentElement.style.backgroundColor = "#2ec4b586";
@@ -22,6 +23,7 @@ for (var i = 0; i < inputCheck.length; i++) {
   };
 }
 
+//En caso de pulsar el boton para realizar el pedido solicitara una serie de datos y al final los guardara en variable para su proximo uso
 document.getElementById("pedido").onclick = function () {
   var c = window.prompt("Necesitamos una cuenta de correo electrónico");
   var d;
@@ -44,6 +46,7 @@ document.getElementById("pedido").onclick = function () {
   }
 };
 
+//Calcula el precio de las pizzas según los ingredientes seleccionados con su 50% extra
 function calcularPrecio() {
   suma = 0;
   for (var i = 0; i < inputCheck.length; i++) {

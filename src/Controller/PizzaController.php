@@ -32,6 +32,11 @@ class PizzaController extends AbstractController
         ]);
     }
 
+    /**
+     * Metodo para obtener una pizza en específico
+     * int $id -> id de la pizza que queremos obtener
+     * return Pizza -> devuelve la pizza
+     */
     private function obtenerPizza(int $id)
     {
 
@@ -39,6 +44,10 @@ class PizzaController extends AbstractController
         return $repository->findOneBy(['id' => $id]);
     }
 
+    /**
+     * Metodo para obtener todos los ingredientes
+     * return array -> devuelve un array de objetos Ingredientes
+     */
     private function obtenerIngredientes()
     {
         $repository = $this->getDoctrine()->getRepository(Ingrediente::class);

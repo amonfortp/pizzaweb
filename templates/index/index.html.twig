@@ -3,6 +3,9 @@
 {% block body %}
 <div class="superior">
     <h1 class="titulo">PizzaWeb</h1>
+    {# 
+        Elemento de la libreria de boostrap de imagenes deslizandose
+    #}
     <div class="pizzas">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -28,7 +31,10 @@
     <div class="col-12 text-center">
         <p class="h3">Escoge algo de tu agrado</p>
     </div> 
-    {% if pizzas is defined%}
+    {#
+        Comprueba que existen pizzas y las va mostrando utilizando un bucle for  
+    #}
+    {% if pizzas is defined %}
         {% for pizza in pizzas %}
             <div class="col-6 mt-5">
                 <a href="{{ path('pizza' , {id:pizza.id})}}" class="btn btn-block pizza">

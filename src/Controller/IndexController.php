@@ -23,6 +23,7 @@ class IndexController extends AbstractController
 
     /**
      * Metodo para obtener todas las pizzas
+     * return array -> Devuelve un array de objetos Pizza
      */
     private function obtenerPizzas()
     {

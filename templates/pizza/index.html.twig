@@ -33,6 +33,13 @@
 {% endfor %}
 
 <div class="row d-flex ingredientes mb-5 text-center">
+    {#
+        Depende de si pizzaExiste es true o false se carga la página de una manera u otra.
+        False -
+            Muestra los ingredientes sin preferencia y todos juntos
+        True -
+            Separa los ingredientes entre propios de la pizza y otros
+    #}
     {% if pizzaExiste == false %}
     <div class="col-12 text-center">
         <p class="h3">Escoge tus ingredientes</p>
@@ -77,6 +84,9 @@
     {% endif %}
     <div class="col-6 mt-5 text-left">
         <p class="h4">Ingredientes seleccionados</p>
+        {#
+            Crea todos los elementos acorde a los ingredientes y los oculta para mostrarlos cuando es necesario gracias a javascript
+        #}
         {% if pizzaExiste != false %}
             {% for pIngrediente in pizza.ingredientes %}
                 <div class="selector" id="ingrediente{{pIngrediente.id}}">
